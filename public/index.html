@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beranda | Sisforlab</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}" />
+
+    <!-- {{-- Opens sans --}} -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- Fontawesome Icons -->
+    <script src="./js/all.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/beranda.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="navbar navbar-expand-lg py-3 px-3 px-md-5 container">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="#">Sisforlab</a>
+          <button
+            class="navbar-toggler text-black"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="">Katalog Alat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ Request::is('pesanan') ? 'active' : '' }}" aria-current="page" href=""
+                  >Pesanan Saya</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Tentang Kami</a>
+              </li>
+            </ul>
+            <button type="button" class="mybtn white">Masuk</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="beranda">
+        <!-- {{-- Hero --}} -->
+        <section class="hero position-relative">
+          <img src="./img/hero-rev.jpg" width="100%" height="600px" alt="Hero Image" />
+          <div class="gradient position-absolute h-100 w-100"></div>
+          <div class="hero__wrapper position-absolute w-100 container">
+            <h1 class="fw-bold title1 text-center text-white lh__md text__shadow">
+              Platform Penyewaan Alat Laboratorium Terpercaya
+            </h1>
+            <h2 class="title2 text-center mt-3 lh__md text-white text__shadow">
+              Cari, pilih, dan sewa alat laboratorium dengan mudah.
+            </h2>
+            <div class="search__wrapper bg-white p-3 p-md-4 mt-5 br__md mx-auto">
+              <div class="d-flex gap-3 flex-wrap">
+                <div>
+                  <label for="exampleInputEmail1" class="form-label">Nama Barang</label>
+                  <input
+                    class="form-control"
+                    id="keyword"
+                    aria-describedby="emailHelp"
+                    placeholder="Contoh : mikroskop"
+                  />
+                </div>
+                <button class="mybtn dark__blue bc__dark-blue align-self-end fw-bold">
+                  <i class="fa-solid fa-magnifying-glass me-1"></i> Cari
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- {{-- End hero --}} -->
+
+        <!-- {{-- Our client --}} -->
+        <section class="our__client bg__light py-4">
+          <h3 class="text-center fw-bold title3 dark__blue">Klien Kami</h3>
+          <div class="our__client-wrapper row g-3 mt-2 mt-md-3 px-md-5 mx-auto container">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="d-flex align-items-center gap-3">
+                <img src="./img/logo-ui-png.png" width="100%" alt="Logo Universitas" />
+                <p class="title4">Universitas Indonesia</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="d-flex align-items-center gap-3">
+                <img src="./img/logo-ugm.png" width="100%" alt="Logo Universitas" />
+                <p class="title4">Universitas Gajah Mada</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="d-flex align-items-center gap-3">
+                <img src="./img/logo-itb.png" width="100%" alt="Logo Universitas" />
+                <p class="title4">Institut Teknologi Bandung</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="d-flex align-items-center gap-3">
+                <img src="./img/logo-unair.png" width="100%" alt="Logo Universitas" />
+                <p class="title4">Universitas Airlangga</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- {{-- End our client --}} -->
+
+        <!-- {{-- Highlight product --}} -->
+        <section class="highlight__product container py-4 py-lg-5 px-md-5 my-3">
+          <div class="header d-flex gap-3 flex-wrap mb-4 mb-lg-5">
+            <div class="title">
+              <h3 class="title3 orange fw-semibold">Produk Unggulan Kami</h3>
+              <h4 class="title2 dark__blue lh__md mt-3 fw-bold">
+                Jadikan Eksperimen Anda Lebih Terjangkau dan Lebih Bermakna
+              </h4>
+            </div>
+            <p class="description title4 lh__big align-self-end dark__grey">
+              Dapatkan pengalaman penyewaan alat laboratorium yang tak tertandingi dengan pilihan produk terpopuler,
+              harga eksklusif, dan layanan unggulan. Kami hadir untuk menjadikan setiap eksperimen Anda lebih terjangkau
+              dan lebih bermakna.
+            </p>
+          </div>
+          <div class="item__wrapper mb-4 mb-md-5">
+            <div class="item__mobile">
+              <h5 class="green title2 fw-bold mb-3">Mikroskop Elektron</h5>
+              <img src="./img/mikroskop-elektron.jpg" width="100%" alt="Mikroskop Elektron" class="br__big mb-2" />
+              <p class="title4 dark__grey lh__big">
+                Mikroskop elektron telah menjadi alat utama dalam berbagai disiplin ilmu, termasuk biologi sel dan
+                molekuler, ilmu material, fisika, dan ilmu kedokteran. Keuntungan dari penggunaan mikroskop elektron
+                yaitu memiliki kemampuan untuk melihat struktur pada skala nanometer.
+              </p>
+              <button class="mybtn dark__blue mt-3 bc__dark-blue py-2 px-4 w-100 fw-bold">
+                Selengkapnya <i class="fa-solid fa-arrow-right-long ms-2"></i>
+              </button>
+            </div>
+            <div class="item__desktop gap-4 d-none">
+              <img src="./img/mikroskop-elektron.jpg" width="100%" alt="Mikroskop Elektron" class="br__big" />
+              <div class="description">
+                <h5 class="green title2 fw-bold mb-2">Mikroskop Elektron</h5>
+                <p class="title4 dark__grey lh__big">
+                  Mikroskop elektron telah menjadi alat utama dalam berbagai disiplin ilmu, termasuk biologi sel dan
+                  molekuler, ilmu material, fisika, dan ilmu kedokteran. Keuntungan dari penggunaan mikroskop elektron
+                  yaitu memiliki kemampuan untuk melihat struktur pada skala nanometer.
+                </p>
+                <button class="mybtn dark__blue mt-3 bc__dark-blue py-2 px-4 fw-bold">
+                  Selengkapnya <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item__wrapper mb-4 mb-md-5">
+            <div class="item__mobile">
+              <h5 class="title2 green fw-bold mb-3">Gelas Beaker</h5>
+              <img src="./img/gelar-beaker.jpg" width="100%" alt="Mikroskop Elektron" class="br__big mb-2" />
+              <p class="title4 dark__grey lh__big">
+                Digunakan untuk mengukur, mencampur, dan memanaskan zat kimia dalam jumlah yang relatif besar. Gelar
+                beaker sering digunakan untuk percobaan skala besar, dan mereka memberikan volume perkiraan, bukan
+                pengukuran yang akurat.
+              </p>
+              <button class="mybtn dark__blue mt-3 bc__dark-blue py-2 px-4 w-100 fw-bold">
+                Selengkapnya <i class="fa-solid fa-arrow-right-long ms-2"></i>
+              </button>
+            </div>
+            <div class="item__desktop gap-4 d-none">
+              <img src="./img/gelar-beaker.jpg" width="100%" alt="Mikroskop Elektron" class="br__big" />
+              <div class="description">
+                <h5 class="title2 green fw-bold mb-2">Gelas Beaker</h5>
+                <p class="title4 dark__grey lh__big">
+                  Digunakan untuk mengukur, mencampur, dan memanaskan zat kimia dalam jumlah yang relatif besar. Gelar
+                  beaker sering digunakan untuk percobaan skala besar, dan mereka memberikan volume perkiraan, bukan
+                  pengukuran yang akurat.
+                </p>
+                <button class="mybtn dark__blue mt-3 bc__dark-blue py-2 px-4 fw-bold">
+                  Selengkapnya <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- {{-- End highlight product --}} -->
+
+        <!-- {{-- Rental flow --}} -->
+        <section class="flow bg__light">
+          <div class="container py-5 px-md-5">
+            <div class="title text-center">
+              <h3 class="fw-semibold title2 orange">Alur Penyewaan</h3>
+              <h4 class="fw-normal title3 lh__big dark__blue fw-bold mt-3">
+                Langkah-langkah sederhana untuk memastikan eksperimen Anda berjalan mulus
+              </h4>
+            </div>
+            <div class="card__wrapper row mt-2 mt-lg-4 g-3">
+              <div class="col-12 col-lg-6 col-xl-3">
+                <div class="bc__green br__md p-3 bg-white">
+                  <div class="icon d-flex gap-2 gap-md-3 green align-items-center">
+                    <i class="fa-solid fa-circle-user fs-4"></i>
+                    <h5 class="title4 fw-bold">Buat Akun</h5>
+                  </div>
+                  <p class="description lh__big title4 mt-3 dark__grey">
+                    Hubungi kami dan lengkapi formulir pendaftaran sesuai ketentuan.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-3">
+                <div class="bc__grey br__md p-3 bg-white">
+                  <div class="icon d-flex gap-2 gap-md-3 align-items-center">
+                    <i class="fa-solid fa-flask fs-4"></i>
+                    <h5 class="title4 fw-bold black">Pilih Alat</h5>
+                  </div>
+                  <p class="description lh__big title4 mt-3 dark__grey">
+                    Jelajahi alat dengan kualitas terbaik dan tambahkan ke keranjang.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-3">
+                <div class="bc__grey br__md p-3 bg-white">
+                  <div class="icon d-flex gap-2 gap-md-3 align-items-center">
+                    <i class="fa-solid fa-square-plus fs-4"></i>
+                    <h5 class="title4 fw-bold black">Ajukan Sewa</h5>
+                  </div>
+                  <p class="description lh__big title4 mt-3 dark__grey">
+                    Jelajahi alat dengan kualitas terbaik dan tambahkan ke keranjang.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-3">
+                <div class="bc__grey br__md p-3 bg-white">
+                  <div class="icon d-flex gap-2 gap-md-3 align-items-center">
+                    <i class="fa-solid fa-check-to-slot fs-4"></i>
+                    <h5 class="title4 fw-bold black">Lengkapi Pembayaran</h5>
+                  </div>
+                  <p class="description lh__big title4 mt-3 dark__grey">
+                    Hubungi kami dan lengkapi formulir pendaftaran sesuai ketentuan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- {{-- End rental flow --}} -->
+
+        <!-- {{-- Review --}} -->
+        <section class="review py-5">
+          <div class="review__wrapper d-flex gap-3 flex-wrap container px-md-5">
+            <div class="header">
+              <h3 class="title1 dark__blue fw-bold">Apa Kata Mereka?</h3>
+              <h4 class="mt-3 title3 lh__big fw-normal">
+                Kami bangga berbagi cerita sukses dan pengakuan dari pelanggan yang memberikan gambaran jelas tentang
+                kualitas layanan kami.
+              </h4>
+            </div>
+            <div class="row g-3 g-md-3">
+              <div class="col-md-6 col-12">
+                <div class="testimony__card p-3 br__md bc__grey bg-white">
+                  <div class="d-flex flex-wrap gap-2">
+                    <img src="./img/avatar.png" alt="Avatar" height="100%" class="p-0" />
+                    <div class="title">
+                      <h5 class="fw-bold lh__md title4">Prof. Dr. dr. Tri Indah Winarni, M.Si.Med.,PA</h5>
+                      <p class="title4 mt-2 green fw-semibold">Rektor UNDIP</p>
+                    </div>
+                  </div>
+                  <div class="caption mt-3">
+                    <p class="title4 lh__big dark__grey">
+                      "Pelayanan penyewaan alat laboratorium mereka sangat profesional dan cepat. Alat-alatnya selalu
+                      dalam kondisi baik, dan harga sewanya sangat bersaing!"
+                    </p>
+                  </div>
+                  <div class="stars mt-2">
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="testimony__card p-3 br__md bc__grey bg-white">
+                  <div class="d-flex flex-wrap gap-2">
+                    <img src="./img/avatar.png" alt="Avatar" class="p-0" />
+                    <div class="title">
+                      <h5 class="fw-bold title4 lh__md">Prof. Dr. dr. Dwi Pudjonarko, M.Kes, Sp.S(K)</h5>
+                      <p class="title4 mt-2 green fw-semibold">Dekan FK UNDIP</p>
+                    </div>
+                  </div>
+                  <div class="caption mt-3">
+                    <p class="title4 lh__big dark__grey">
+                      "Pelayanan penyewaan alat laboratorium mereka sangat profesional dan cepat. Alat-alatnya selalu
+                      dalam kondisi baik, dan harga sewanya sangat bersaing!"
+                    </p>
+                  </div>
+                  <div class="stars mt-2">
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                    <i class="fa-solid fa-star orange"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- {{-- End review --}} -->
+      </section>
+    </main>
+    <footer class="mt-3">
+      <div class="container py-4 py-md-5 px-md-5">
+        <div class="row g-4 g-md-3 mb-4">
+          <div class="col-12 col-md-6">
+            <div class="d-flex align-items-center gap-2">
+              <img src="./img/logo-undip.png" alt="Logo Undip" width="50px" />
+              <p class="text-white title4 fw-bold lh__md">
+                Fakultas Kedokteran <br />
+                Universitas Diponegoro
+              </p>
+            </div>
+            <div class="contact text-white mt-4 title5">
+              <p class=""><i class="fa-solid fa-envelope me-2"></i>dean@fk.undip.ac.id</p>
+              <p class="mt-2"><i class="fa-solid fa-square-phone me-2"></i>024–76928010</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="address text-white ms-auto">
+              <p class="title5 fw-bold lh__md">Alamat</p>
+              <p class="title5 lh__md mt-2">
+                Jl. Prof Mr. Sunario Kampus Universitas Diponegoro Tembalang, <br />
+                Semarang Kode Pos 50275
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="credit d-flex flex-wrap gap-2 justify-content-between py-2 text-white title5">
+          <p>Copyright 2024. Fakultas Kedokteran Universitas Diponegoro.</p>
+          <p>Made with love <i class="fa-solid fa-heart"></i></p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
